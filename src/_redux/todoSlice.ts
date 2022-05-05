@@ -15,7 +15,7 @@ export const counterSlice = createSlice({
   initialState,
   reducers: {
     showIdRed: (state) => {
-      state.id;
+      state.id = 2;
     },
   },
 });
