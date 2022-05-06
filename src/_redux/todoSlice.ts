@@ -1,25 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
 //still a template,not the actal one
-export interface TodoState {
+
+export interface iTodoState {
   id: number;
   content: string;
 }
 
-const initialState: TodoState = {
-  id: 1,
-  content: "just a something we do",
-};
+const initialState: iTodoState[] = [
+  { id: 1, content: "buy some milk" },
+  { id: 2, content: "play a game" },
+];
 
 export const counterSlice = createSlice({
   name: "todo",
   initialState,
   reducers: {
-    showIdRed: (state) => {
-      state.id = 2;
+    addTodoRed: (state, payload) => {
+      state = payload.payload;
     },
   },
 });
 
-export const { showIdRed } = counterSlice.actions;
+export const { addTodoRed } = counterSlice.actions;
 
 export default counterSlice.reducer;

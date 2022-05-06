@@ -1,12 +1,9 @@
 import {
-  interfaceTodos,
-  interfaceTodosFunctions,
+  iTodoState,
+  iTodosFunctions,
 } from "../../../interfaces/todo.interface";
 
-const TodosPage = ({
-  todo,
-  deleteHandler,
-}: interfaceTodos & interfaceTodosFunctions) => {
+const TodosPage = ({ deleteHandler, todo }: iTodosFunctions & iTodoState) => {
   const todoList = todo!.length ? (
     todo!.map((todo) => {
       return (

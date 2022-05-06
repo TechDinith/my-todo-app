@@ -1,7 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-import { interfaceTodosFunctions } from "../../../interfaces/todo.interface";
+import { iTodosFunctions } from "../../../interfaces/todo.interface";
 
-const AddTodoPage = ({ addTodoHandler }: interfaceTodosFunctions) => {
+const AddTodoPage = ({ addTodoHandler }: iTodosFunctions) => {
   const [content, setContent] = useState({
     content: " ",
   });
