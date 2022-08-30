@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import TodosPage from "./components/pages/TodoPage/TodosPage.page";
-// import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
 import AddTodoPage from "./components/pages/AddTodoPage/addTodo.page";
 import { iContent, iTodoState } from "./interfaces/todo.interface";
 import { useReduxHooks } from "./_redux/_reduxHooks";
 import { addTodoRed } from "./_redux/todoSlice";
-import { useDispatch } from "react-redux";
 
 function App() {
-  // M.AutoInit();
   const reduxHooks = useReduxHooks();
 
   const initialState = reduxHooks.useAppSelector(
